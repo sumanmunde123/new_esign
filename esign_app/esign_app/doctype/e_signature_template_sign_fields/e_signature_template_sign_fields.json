@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-07 05:11:25.761932",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "label",
+  "required",
+  "responsible",
+  "page_no",
+  "x_position",
+  "y_position",
+  "width",
+  "height"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "Signature\nInitials\nName\nEmail\nPhone\nCompany\nText\nMultiline Text\nCheckbox\nSelection\nDate\nDateTime\nLocation",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Label",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "required",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Required"
+  },
+  {
+   "columns": 2,
+   "description": "Name any contact field from the doctype selected for sending the signature request",
+   "fieldname": "responsible",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Responsible",
+   "no_copy": 1,
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "page_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Page No",
+   "non_negative": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "x_position",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "X Position",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "y_position",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Y Position",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "width",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Width",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "height",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Height",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-10-27 11:20:21.449484",
+ "modified_by": "Administrator",
+ "module": "Esign App",
+ "name": "E-Signature Template Sign Fields",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

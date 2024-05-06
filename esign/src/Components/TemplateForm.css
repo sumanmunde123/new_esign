@@ -1,0 +1,448 @@
+.template {
+    border: 1px solid white;
+    position: relative;
+    width: 1415px;
+    height: 950px;
+    margin-left: -5%;
+    box-shadow: 0px 0px 10px 0px gray;
+    background-color: rgb(240, 237, 237);
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif !important;
+    margin-top: 0;
+    /* margin-top: 10%; */
+  }
+  .mainline {
+    margin-left: 25%;
+    /* margin-top: -10%; */
+  }
+  .sideicon {
+    /* border: 1px solid rgb(218, 213, 213); */
+    height: 100%;
+    width: 66px;
+    box-shadow: 0px 0px 10px 0px gray;
+  }
+  .temp_icon {
+    margin-left: 20%;
+    margin-top: 20%;
+    padding-right: 18%;
+  }
+  .temp_iconi {
+    margin-left: 20%;
+    margin-top: 850%;
+  }
+ 
+  
+  .templateinput {
+    /* border: 1px solid black;  */
+    height: 100%;
+    width: 224px;
+    position: absolute;
+    margin-left: 5%;
+    margin-top: -67.1%;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px 0px gray;
+  }
+  .lables {
+ 
+    font-size: 16px;
+    margin-top: 4%;
+  
+  }
+  .lablesi {
+    font-size: 16px;
+  }
+  .inputf {
+    width: 90%;
+    background-color: gainsboro;
+    margin-left: 0%;
+    border: none;
+    height: 27px;
+    margin-top: -4%;
+  }
+  
+  .pdfbtn {
+    /* border: 1px solid black; */
+    width: 80%;
+    margin-left: 5%;
+    height: 40px;
+    margin-top: 10%;
+    font-size: 14px;
+   
+  }
+  .pbtn {
+    margin-left: 10%;
+    color: white;
+    background-color: rgba(61, 61, 250, 0.897);
+    height: 40px;
+    width: 88%;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  .condition {
+    border: 1px solid wheat;
+    background-color: rgb(255, 255, 255);
+    height: 180px;
+    width: 90%;
+    margin-left: 4%;
+    /* margin-top: 30%; */
+  }
+  .text {
+    margin-top: 5%;
+    margin-left: 4%;
+    font-size: 16px;
+  }
+  
+  .dragicons {
+    /* border: 1px solid white;  */
+    width: 58px;
+    height: 100%;
+    margin-left: 21.2%;
+    margin-top: -67.1%;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px gray;
+  }
+ 
+  .inzoom {
+    border: 1px solid black;
+    height: 50%;
+    width: 100%;
+    /* position: absolute; */
+    box-sizing: border-box;
+  }
+  .iconzoom {
+    margin-left: 0px;
+    margin-top: -3.3px;
+  }
+  .smallboxes {
+    border: 1px solid gray;
+    width: 60%;
+    height: 270px;
+    margin-left: 13%;
+    padding-top: 0%;
+    border-radius: 5px;
+    margin-top: 20%;
+  }
+  .insideiconbox {
+    border: 1px solid black;
+    height: 13.51%;
+     /* border-radius: 3px; */
+  }
+  .iconzoom{
+    padding-top: 30%;
+  }
+  
+  /* pdf space */
+  
+  
+  .pdfspace {
+       /* border: 1px solid black; */
+       width: 716px;
+       height: 100%;
+       margin-left: 26%;
+       margin-top: -67.1%;
+       position: relative;
+       background-color: whitesmoke;
+       overflow: hidden;
+       box-shadow: 0px 0px 10px 0px gray;
+  }
+  .uppercontent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 96%;
+    height: 100%;
+    box-sizing: border-box;
+    /* background-color: red; */
+  }
+  .newdiv {
+    border: 1px solid yellow;
+    /* box-shadow: 0px 0px 2px 2px; */
+    width: auto;
+    height: auto;
+    position: absolute;
+    /* background-color: rgb(241, 241, 144); */
+    box-sizing: border-box;
+  }
+  .text-input {
+    /* border: 1px solid red; */
+    /* box-shadow: 0px 0px 2px 2px; */
+    width: 100px;
+    height: 50px;
+    /* position: absolute; */
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: rgb(227, 227, 117);
+  
+  }
+  .text-inputbox {
+    /* border: 1px solid tomato; */
+    width: 300px;
+    height: 150px;
+    margin-top: -70%;
+    position: absolute;
+    margin-left: 15%;
+    /* box-shadow: 0px 0px 2px 2px; */
+    display: none;
+    z-index: 2;
+    opacity: 1;
+    background-color: gainsboro;
+  }
+  .popup-input {
+    width: 90%;
+    margin-left: 3%;
+    height: 60%;
+    box-sizing: border-box;
+    margin-top: 3%;
+  }
+  .popup-addbtn {
+    background-color: rgb(27, 27, 203);
+    color: white;
+    margin-left: 70%;
+    height: 35px;
+    width: 80px;
+    margin-top: 3%;
+    box-sizing: border-box;
+    z-index: 2;
+    opacity: 1;
+  }
+  
+  /* add pdf */
+  
+  .addpdf {
+    /* border: 1px solid gainsboro; */
+    width: 320px;
+    height: 100%;
+    box-sizing: border-box;
+    margin-left: 77.5%;
+    margin-top: -67.2%;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px 0px gray;
+  }
+  .signbtn {
+    /* border: 1px solid teal;  */
+    width: 61%;
+    height: 41px;
+    padding-top: 10%;
+    margin-left: 19%;
+    
+  }
+  .sbtn {
+    font-size: 16px;
+    height: 41px;
+    width: 100%;
+    /* border: 1px solid teal; */
+    box-shadow: 0px 0px 10px 0px gray;
+    background-color: rgb(48, 48, 247);
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .assignpdfto {
+    /* border: 1px solid rgb(208, 201, 201);  */
+    height: 90%;
+    width: 90%;
+    margin-top: 7%;
+    margin-left: 5%;
+  }
+  .selectassignee {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    height: 45px;
+    border: 1px solid gainsboro;
+    gap: 20px;
+    /* justify-content: space-around; */
+  }
+  #field {
+    font-weight: bold;
+    /* border: 1px solid gainsboro; */
+    width: 45%;
+    padding-left: 5%;
+    height: auto;
+    padding-top: 4%;
+    background-color: white;
+    /* /* border-radius: 15%; */
+  }
+  #people {
+    font-weight: bold;
+    width: 55%;
+    height: auto;
+    padding-top: 4%;
+  }
+ 
+  .fieldlable {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 2%;
+    margin-top: 2%;
+  }
+  .fieldinput {
+    width: 87%;
+    height: 30px;
+    margin-left: 0%;
+  }
+  .fieldcheck {
+    margin-left: 3%;
+    background-color: blue;
+    color: blue;
+    cursor: pointer;
+    width: 15px;
+  }
+  .fieldpara {
+    margin-left: 2%;
+    font-size: 16px;
+  }
+  .check_field {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .check_fieldi {
+    display: flex;
+    margin-top: -8%;
+  }
+  .lable_two {
+    margin-left: 3%;
+    font-size: 16px;
+    font-weight: bold;
+   margin-top: 2%;
+  }
+  .emptyfield {
+    width: 90%;
+    height: 42px;
+    border: 1px solid grey;
+    margin-left: 5%;
+    border-radius: 5px;
+    display: flex;
+    background-color: white;
+  }
+  #emptyfield {
+    width: 90%;
+    height: 40px;
+    border: 1px solid grey;
+    margin-left: 5%;
+    border-radius: 5px;
+    display: flex;
+    background-color: rgb(180, 167, 167);
+  }
+  .emptyF {
+    width: 50%;
+  }
+  .emptyFtwo {
+    width: 50%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: white;
+  }
+  .emptyFtwo > p {
+    font-size: 17px;
+    margin-top: 8%;
+    margin-left: 9%;
+  }
+  .assigneebtn {
+    width: 90%;
+    margin-left: 5%;
+    color: gray;
+    border: rgb(169, 163, 163);
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    height: 35px;
+    margin-top: -3%;
+    border-radius: 5px;;
+  }
+  
+  /* select pdf  */
+  
+  .selectpdf-popup {
+    border: 1px solid black;
+    width: 400px;
+    height: 150px;
+    margin-left: 37%;
+    margin-top: 20%;
+    opacity: 1;
+    box-shadow: 0px 0px 2px 2px;
+    background-color: gainsboro;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px10px 0px gray;
+  }
+  .selectpdf-popup > h5 {
+    margin-top: -4%;
+    width: 50%;
+  }
+  .allpdficons {
+    border: 1px solid white;
+    width: 85%;
+    margin-left: 7%;
+    height: 60%;
+    margin-top: 7%;
+    background-color: white;
+  }
+  .allpdficons > p {
+    font-size: 12px;
+    text-align: center;
+  }
+  .flexicons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2%;
+  }
+  .cls{
+    margin-top: -8%;
+   margin-left: 90%;
+    background-color: black;
+  }
+   
+  .closeiconpop{
+   
+    width: 1rem;
+    height: 1rem;
+    margin-top: -8%;
+    margin-left: 90%;
+  } 
+  .getpdficon {
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+  }
+  #htmlFormat{
+    border: 1px solid gray;
+    width: 88%;
+    margin-left: 1%;
+    height: 22%;
+    margin-top: 5%;
+  }
+  .popupArea{
+    /* border: 1px solid rebeccapurple; */
+    height: 60%;
+    margin-top: -3%;
+  }
+  .popupArea > textarea {
+    width: 98%;
+    height: 92%;
+  }
+  .popup-buttons{
+    /* border: 1px solid black; */
+    margin-top: 3%;
+    height: 30%;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  }
+  .popup-buttons > button{
+ width: 30%;
+ height: 70%;
+ font-size: 16px;
+ border-radius: 5px;
+ background-color: lightblue;
+  }
+.selectpdf-popup > h4{
+  margin-top: -4%;
+}

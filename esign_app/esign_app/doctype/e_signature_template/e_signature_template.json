@@ -1,0 +1,282 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Prompt",
+ "creation": "2023-03-07 05:09:44.651398",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "event_details_tab",
+  "enabled",
+  "column_break_2",
+  "email_signed_document_contact",
+  "filters",
+  "subject",
+  "document_type",
+  "col_break_1",
+  "event",
+  "method",
+  "date_changed",
+  "days_in_advance",
+  "value_changed",
+  "sender",
+  "sender_email",
+  "section_break_9",
+  "condition",
+  "column_break_6",
+  "html_7",
+  "message_sb",
+  "preview_document",
+  "message",
+  "message_examples",
+  "view_properties",
+  "sign_fields_tab",
+  "add_fields",
+  "column_break_utu99",
+  "sequential_approval",
+  "section_break_q8rmo",
+  "fields",
+  "signature_request_expiry",
+  "expire_request_in_days",
+  "expire_request_field_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "event_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Event Details"
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email_signed_document_contact",
+   "fieldtype": "Select",
+   "label": "Email Signed Document (Contact Field)"
+  },
+  {
+   "fieldname": "filters",
+   "fieldtype": "Section Break",
+   "label": "Filters"
+  },
+  {
+   "depends_on": "eval: in_list(['Email', 'Slack', 'System Notification'], doc.channel)",
+   "description": "To add dynamic subject, use jinja tags like\n\n<div><pre><code>{{ doc.name }} Delivered</code></pre></div>",
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "ignore_xss_filter": 1,
+   "in_list_view": 1,
+   "label": "Subject",
+   "mandatory_depends_on": "eval: in_list(['Email', 'Slack', 'System Notification'], doc.channel)"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Document Type",
+   "options": "DocType",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.document_type",
+   "fieldname": "event",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Trigger Event",
+   "options": "\nNew\nSave\nSubmit\nCancel\nDays After\nDays Before\nValue Change\nMethod\nCustom",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "depends_on": "eval:doc.event=='Method'",
+   "description": "Trigger on valid methods like \"before_insert\", \"after_update\", etc (will depend on the DocType selected)",
+   "fieldname": "method",
+   "fieldtype": "Data",
+   "label": "Trigger Method"
+  },
+  {
+   "depends_on": "eval:doc.document_type && (doc.event==\"Days After\" || doc.event==\"Days Before\")",
+   "description": "Send alert if date matches this field's value",
+   "fieldname": "date_changed",
+   "fieldtype": "Select",
+   "label": "Reference Date"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.document_type && (doc.event==\"Days After\" || doc.event==\"Days Before\")",
+   "description": "Send days before or after the reference date",
+   "fieldname": "days_in_advance",
+   "fieldtype": "Int",
+   "label": "Days Before or After"
+  },
+  {
+   "depends_on": "eval:doc.document_type && doc.event==\"Value Change\"",
+   "description": "Send alert if this field's value changes",
+   "fieldname": "value_changed",
+   "fieldtype": "Select",
+   "label": "Value Changed"
+  },
+  {
+   "depends_on": "eval: doc.channel == 'Email'",
+   "fieldname": "sender",
+   "fieldtype": "Link",
+   "label": "Sender",
+   "options": "Email Account"
+  },
+  {
+   "fieldname": "sender_email",
+   "fieldtype": "Data",
+   "label": "Sender Email",
+   "options": "Email",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Condition"
+  },
+  {
+   "description": "Optional: The alert will be sent if this expression is true",
+   "fieldname": "condition",
+   "fieldtype": "Code",
+   "ignore_xss_filter": 1,
+   "in_list_view": 1,
+   "label": "Condition"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "html_7",
+   "fieldtype": "HTML",
+   "options": "<p><strong>Condition Examples:</strong></p>\n<pre>doc.status==\"Open\"<br>doc.due_date==nowdate()<br>doc.total &gt; 40000\n</pre>\n"
+  },
+  {
+   "fieldname": "message_sb",
+   "fieldtype": "Tab Break",
+   "label": "Agreement Terms"
+  },
+  {
+   "fieldname": "preview_document",
+   "fieldtype": "Button",
+   "label": "Preview"
+  },
+  {
+   "default": "Add your message here",
+   "fieldname": "message",
+   "fieldtype": "Code",
+   "ignore_xss_filter": 1,
+   "label": "Terms"
+  },
+  {
+   "fieldname": "message_examples",
+   "fieldtype": "HTML",
+   "label": "Message Examples",
+   "options": "<h5>Message Example</h5>\n\n<pre>&lt;h3&gt;Order Overdue&lt;/h3&gt;\n\n&lt;p&gt;Transaction {{ doc.name }} has exceeded Due Date. Please take necessary action.&lt;/p&gt;\n\n&lt;!-- show last comment --&gt;\n{% if comments %}\nLast comment: {{ comments[-1].comment }} by {{ comments[-1].by }}\n{% endif %}\n\n&lt;h4&gt;Details&lt;/h4&gt;\n\n&lt;ul&gt;\n&lt;li&gt;Customer: {{ doc.customer }}\n&lt;li&gt;Amount: {{ doc.grand_total }}\n&lt;/ul&gt;\n</pre>"
+  },
+  {
+   "fieldname": "view_properties",
+   "fieldtype": "Button",
+   "label": "View Properties (via Customize Form)"
+  },
+  {
+   "fieldname": "sign_fields_tab",
+   "fieldtype": "Tab Break",
+   "label": "Sign Fields"
+  },
+  {
+   "fieldname": "add_fields",
+   "fieldtype": "Button",
+   "label": "Add Fields Visually"
+  },
+  {
+   "fieldname": "column_break_utu99",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sequential_approval",
+   "fieldtype": "Check",
+   "label": "Sequential Approval"
+  },
+  {
+   "fieldname": "section_break_q8rmo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fields",
+   "fieldtype": "Table",
+   "label": "Fields",
+   "options": "E-Signature Template Sign Fields"
+  },
+  {
+   "fieldname": "signature_request_expiry",
+   "fieldtype": "Select",
+   "label": "Signature Request Expiry",
+   "options": "Fixed Days\nFrom Date Field",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.signature_request_expiry=='Fixed Days';",
+   "fieldname": "expire_request_in_days",
+   "fieldtype": "Int",
+   "label": "Expire Request (in days)",
+   "mandatory_depends_on": "eval:doc.signature_request_expiry=='Fixed Days';"
+  },
+  {
+   "depends_on": "eval:doc.signature_request_expiry=='From Date Field';",
+   "fieldname": "expire_request_field_name",
+   "fieldtype": "Data",
+   "label": "Expire Request (field name)",
+   "mandatory_depends_on": "eval:doc.signature_request_expiry=='From Date Field';"
+  }
+ ],
+ "icon": "fa fa-envelope",
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Signature Documents",
+   "link_doctype": "E-Signature Document",
+   "link_fieldname": "signature_template"
+  }
+ ],
+ "modified": "2023-10-27 11:18:27.644330",
+ "modified_by": "Administrator",
+ "module": "Esign App",
+ "name": "E-Signature Template",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "subject",
+ "track_changes": 1
+}
